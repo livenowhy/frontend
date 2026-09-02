@@ -43,6 +43,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       host: "0.0.0.0",
       port: +env.VITE_APP_PORT,
       open: true,
+      allowedHosts: ["vm.livenowhy.com"],
       proxy: {
         [env.VITE_APP_BASE_API]: {
           changeOrigin: true,

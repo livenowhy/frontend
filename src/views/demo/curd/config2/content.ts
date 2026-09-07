@@ -1,8 +1,8 @@
 import type { IContentConfig } from "@/components/CURD/types";
 
 interface DemoQueryParams {
-  pageNum?: number;
-  pageSize?: number;
+  page_num?: number;
+  page_size?: number;
   [key: string]: any;
 }
 
@@ -61,10 +61,10 @@ const contentConfig: IContentConfig<DemoQueryParams, DemoItem> = {
       },
     ];
 
-    const pageNum = Number(params?.pageNum ?? 1) || 1;
-    const pageSize = Number(params?.pageSize ?? list.length) || list.length;
-    const start = (pageNum - 1) * pageSize;
-    const end = start + pageSize;
+    const page_num = Number(params?.page_num ?? 1) || 1;
+    const page_size = Number(params?.page_size ?? list.length) || list.length;
+    const start = (page_num - 1) * page_size;
+    const end = start + page_size;
 
     return Promise.resolve({
       list: list.slice(start, end),

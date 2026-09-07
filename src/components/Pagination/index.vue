@@ -3,10 +3,10 @@
     <div :class="{ 'is-hidden': hidden }" class="pagination-container">
       <el-pagination
         v-model:current-page="currentPage"
-        v-model:page-size="pageSize"
+        v-model:page-size="page_size"
         :background="background"
         :layout="layout"
-        :page-sizes="pageSizes"
+        :page-sizes="page_sizes"
         :total="total"
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
@@ -20,7 +20,7 @@ interface Props {
   /** 数据总条数 */
   total: number;
   /** 每页条数选项，默认 [10, 20, 50, 100] */
-  pageSizes?: number[];
+  page_sizes?: number[];
   /** 分页布局，控制显示哪些子组件及其顺序 */
   layout?: string;
   /** 是否为分页按钮添加背景色 */
@@ -31,7 +31,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   total: 0,
-  pageSizes: () => [10, 20, 50, 100],
+  page_sizes: () => [10, 20, 50, 100],
   layout: "total, sizes, prev, pager, next, jumper",
   background: true,
   hidden: false,
@@ -46,16 +46,16 @@ const emit = defineEmits<{
 const currentPage = defineModel<number>("page", { default: 1 });
 
 // 每页条数，双向绑定到父组件的 limit
-const pageSize = defineModel<number>("limit", { default: 10 });
+const page_size = defineModel<number>("limit", { default: 10 });
 
 // 数据总量变化后，若当前页超出最后一页，则回退到最后一页
 watch(
   () => props.total,
   (newVal: number) => {
-    const lastPage = Math.ceil(newVal / pageSize.value);
+    const lastPage = Math.ceil(newVal / page_size.value);
     if (newVal > 0 && currentPage.value > lastPage) {
       currentPage.value = lastPage;
-      emit("pagination", { page: currentPage.value, limit: pageSize.value });
+      emit("pagination", { page: currentPage.value, limit: page_size.value });
     }
   }
 );
@@ -68,7 +68,7 @@ function handleSizeChange(val: number) {
 
 // 切换页码时触发分页请求
 function handleCurrentChange(val: number) {
-  emit("pagination", { page: val, limit: pageSize.value });
+  emit("pagination", { page: val, limit: page_size.value });
 }
 </script>
 

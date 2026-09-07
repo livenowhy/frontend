@@ -30,9 +30,9 @@ export function configureVxeTable() {
     },
     pager: {
       perfect: false,
-      pageSize: 10,
+      page_size: 10,
       pagerCount: 7,
-      pageSizes: [10, 20, 50],
+      page_sizes: [10, 20, 50],
       layouts: [
         "Total",
         "PrevJump",

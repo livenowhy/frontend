@@ -234,18 +234,18 @@ export default defineMock([
     url: "notices/my",
     method: ["GET"],
     body({ query }) {
-      const pageNum = Number(query?.pageNum || 1);
-      const pageSize = Number(query?.pageSize || 10);
+      const page_num = Number(query?.page_num || 1);
+      const page_size = Number(query?.page_size || 10);
       const isRead =
         query?.isRead == null || query.isRead === "" ? undefined : Number(query.isRead);
       const filtered =
         isRead == null ? myNoticeList : myNoticeList.filter((item) => item.isRead === isRead);
-      const start = (pageNum - 1) * pageSize;
+      const start = (page_num - 1) * page_size;
 
       return {
         code: "00000",
         data: {
-          list: filtered.slice(start, start + pageSize),
+          list: filtered.slice(start, start + page_size),
           total: filtered.length,
         },
         msg: "一切ok",

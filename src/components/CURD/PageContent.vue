@@ -460,8 +460,8 @@ const showPagination = props.contentConfig.pagination !== false;
 const defaultPagination = {
   background: true,
   layout: "total, sizes, prev, pager, next, jumper",
-  pageSize: 20,
-  pageSizes: [10, 20, 30, 50],
+  page_size: 20,
+  page_sizes: [10, 20, 30, 50],
   total: 0,
   currentPage: 1,
 };
@@ -472,8 +472,8 @@ const pagination = reactive(
 );
 // 分页相关的请求参数
 const request = props.contentConfig.request ?? {
-  pageName: "pageNum",
-  limitName: "pageSize",
+  pageName: "page_num",
+  limitName: "page_size",
 };
 
 const tableRef = ref<TableInstance>();
@@ -826,7 +826,7 @@ function handleModify(field: string, value: boolean | string | number, row: Reco
 
 // 分页切换
 function handleSizeChange(value: number) {
-  pagination.pageSize = value;
+  pagination.page_size = value;
   handleRefresh();
 }
 function handleCurrentChange(value: number) {
@@ -872,7 +872,7 @@ function fetchPageData(formData: IObject = {}, isRestart = false) {
       showPagination
         ? {
             [request.pageName]: pagination.currentPage,
-            [request.limitName]: pagination.pageSize,
+            [request.limitName]: pagination.page_size,
             ...getFilterParams(),
             ...formData,
           }

@@ -12,8 +12,8 @@ const contentConfig: IContentConfig<UserQueryParams, UserItem> = {
   pagination: {
     background: true,
     layout: "prev,pager,next,jumper,total,sizes",
-    pageSize: 20,
-    pageSizes: [10, 20, 30, 50],
+    page_size: 20,
+    page_sizes: [10, 20, 30, 50],
   },
   indexAction(params) {
     return UserAPI.getPage(params);

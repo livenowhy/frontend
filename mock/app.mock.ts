@@ -47,7 +47,7 @@ export default defineMock([
     url: "apps",
     method: ["GET"],
     body({ query }) {
-      const { keywords, platform, status, pageNum = "1", pageSize = "10" } = query;
+      const { keywords, platform, status, page_num = "1", page_size = "10" } = query;
       const filtered = appList.filter((item) => {
         if (keywords && !`${item.appName}${item.appCode}${item.appId}`.includes(keywords)) {
           return false;
@@ -56,8 +56,8 @@ export default defineMock([
         if (status && String(item.status) !== String(status)) return false;
         return true;
       });
-      const page = Number(pageNum);
-      const size = Number(pageSize);
+      const page = Number(page_num);
+      const size = Number(page_size);
       const start = (page - 1) * size;
       return {
         code: "00000",

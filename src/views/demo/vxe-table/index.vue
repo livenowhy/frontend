@@ -350,7 +350,7 @@ const gridOptions = reactive<VxeGridProps<RowMeta>>({
   // 分页配置项
   pagerConfig: {
     enabled: true,
-    pageSize: 10,
+    page_size: 10,
   },
   // 数据代理配置项"
   proxyConfig: {
@@ -373,7 +373,7 @@ const gridOptions = reactive<VxeGridProps<RowMeta>>({
     },
     ajax: {
       // 接收 Promise
-      query: ({ page: { currentPage, pageSize } }) => {
+      query: ({ page: { currentPage, page_size } }) => {
         return new Promise<{ total: number; result: RowMeta[] }>((resolve) => {
           setTimeout(() => {
             const list = [
@@ -478,7 +478,7 @@ const gridOptions = reactive<VxeGridProps<RowMeta>>({
               },
             ];
             resolve({
-              result: list.slice((currentPage - 1) * pageSize, currentPage * pageSize),
+              result: list.slice((currentPage - 1) * page_size, currentPage * page_size),
               total: list.length,
             });
           }, 500);

@@ -76,8 +76,8 @@
       <pagination
         v-if="total > 0"
         v-model:total="total"
-        v-model:page="params.pageNum"
-        v-model:limit="params.pageSize"
+        v-model:page="params.page_num"
+        v-model:limit="params.page_size"
         @pagination="fetchData"
       />
     </el-card>
@@ -132,8 +132,8 @@ const { loading, list, total, params, fetchData, handleQuery, handleResetQuery }
   NoticeQueryParams
 >({
   initialParams: {
-    pageNum: 1,
-    pageSize: 10,
+    page_num: 1,
+    page_size: 10,
   },
   request: NoticeAPI.getMyNoticePage,
   onBeforeReset: () => queryFormRef.value?.resetFields(),

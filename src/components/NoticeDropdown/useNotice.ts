@@ -52,8 +52,8 @@ export function useNotice() {
    */
   async function fetchList(params?: Partial<NoticeQueryParams>) {
     const query: NoticeQueryParams = {
-      pageNum: 1,
-      pageSize: PAGE_SIZE,
+      page_num: 1,
+      page_size: PAGE_SIZE,
       isRead: activeStatus.value,
       ...params,
     };
@@ -68,8 +68,8 @@ export function useNotice() {
   /** 仅查询未读通知总数（不更新列表），用于切换到已读 Tab 后刷新角标 */
   async function fetchUnreadTotal() {
     const page = await NoticeAPI.getMyNoticePage({
-      pageNum: 1,
-      pageSize: 1,
+      page_num: 1,
+      page_size: 1,
       isRead: 0,
     });
     unreadTotal.value = page.total ?? 0;

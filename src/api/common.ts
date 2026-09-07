@@ -15,9 +15,9 @@ export interface ApiResult<T = unknown> {
  */
 export interface BaseQueryParams {
   /** 页码 */
-  pageNum: number;
+  page_num: number;
   /** 每页记录数 */
-  pageSize: number;
+  page_size: number;
 
   /** 排序字段 */
   sortBy?: string;

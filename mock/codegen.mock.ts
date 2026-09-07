@@ -256,15 +256,15 @@ export default defineMock([
     url: "codegen/table",
     method: ["GET"],
     body({ query }) {
-      const { keywords, pageNum = "1", pageSize = "10" } = query;
+      const { keywords, page_num = "1", page_size = "10" } = query;
       const filtered = tableList.filter((item) => {
         if (keywords && !`${item.tableName}${item.tableComment}`.includes(keywords)) {
           return false;
         }
         return true;
       });
-      const page = Number(pageNum);
-      const size = Number(pageSize);
+      const page = Number(page_num);
+      const size = Number(page_size);
       const start = (page - 1) * size;
       return {
         code: "00000",

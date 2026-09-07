@@ -125,8 +125,8 @@
         <pagination
           v-if="total > 0"
           v-model:total="total"
-          v-model:page="queryParams.pageNum"
-          v-model:limit="queryParams.pageSize"
+          v-model:page="queryParams.page_num"
+          v-model:limit="queryParams.page_size"
           @pagination="handlePagination"
         />
         <div class="feedback">
@@ -218,15 +218,15 @@ const total = ref(0);
 // 列表数据
 const pageData = ref<IObject[]>([]);
 // 每页条数
-const pageSize = 10;
+const page_size = 10;
 // 搜索参数
 const queryParams = reactive<{
-  pageNum: number;
-  pageSize: number;
+  page_num: number;
+  page_size: number;
   [key: string]: any;
 }>({
-  pageNum: 1,
-  pageSize,
+  page_num: 1,
+  page_size,
 });
 
 // 计算popover的宽度
@@ -256,8 +256,8 @@ function handleQuery() {
 function fetchPageData(isRestart = false) {
   loading.value = true;
   if (isRestart) {
-    queryParams.pageNum = 1;
-    queryParams.pageSize = pageSize;
+    queryParams.page_num = 1;
+    queryParams.page_size = page_size;
   }
   props.selectConfig
     .indexAction(queryParams)

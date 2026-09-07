@@ -37,7 +37,7 @@ export function usePageTable<T, Q extends BaseQueryParams = BaseQueryParams>(
    * 回到第一页并查询
    */
   function handleQuery(): void {
-    params.pageNum = 1;
+    params.page_num = 1;
     fetchData();
   }
 

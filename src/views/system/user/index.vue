@@ -192,8 +192,8 @@
         <pagination
           v-if="total > 0"
           v-model:total="total"
-          v-model:page="params.pageNum"
-          v-model:limit="params.pageSize"
+          v-model:page="params.page_num"
+          v-model:limit="params.page_size"
           class="page-pagination"
           @pagination="fetchData"
         />
@@ -365,8 +365,8 @@ const { loading, list, total, params, fetchData, handleQuery, handleResetQuery }
   UserQueryParams
 >({
   initialParams: {
-    pageNum: 1,
-    pageSize: 10,
+    page_num: 1,
+    page_size: 10,
   },
   request: UserAPI.getPage,
   onBeforeReset: () => queryFormRef.value?.resetFields(),

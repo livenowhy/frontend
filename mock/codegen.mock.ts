@@ -267,7 +267,7 @@ export default defineMock([
       const size = Number(page_size);
       const start = (page - 1) * size;
       return {
-        code: "00000",
+        code: "0",
         data: {
           list: filtered.slice(start, start + size),
           total: filtered.length,
@@ -283,7 +283,7 @@ export default defineMock([
     method: ["GET"],
     body({ params }) {
       return {
-        code: "00000",
+        code: "0",
         data: genConfigMap[params.tableName] ?? buildDefaultConfig(params.tableName),
         msg: "一切ok",
       };
@@ -301,7 +301,7 @@ export default defineMock([
         table.isConfigured = 1;
       }
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "保存成功",
       };
@@ -319,7 +319,7 @@ export default defineMock([
         table.isConfigured = 0;
       }
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "重置成功",
       };
@@ -333,7 +333,7 @@ export default defineMock([
     body({ params }) {
       const table = tableList.find((item) => item.tableName === params.tableName);
       return {
-        code: "00000",
+        code: "0",
         data: buildPreviewFiles(params.tableName, table?.tableComment || params.tableName),
         msg: "一切ok",
       };

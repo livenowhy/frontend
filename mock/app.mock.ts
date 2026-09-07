@@ -60,7 +60,7 @@ export default defineMock([
       const size = Number(page_size);
       const start = (page - 1) * size;
       return {
-        code: "00000",
+        code: "0",
         data: {
           list: filtered.slice(start, start + size),
           total: filtered.length,
@@ -77,7 +77,7 @@ export default defineMock([
     body({ params }) {
       const data = appList.find((item) => item.id === params.id);
       return {
-        code: "00000",
+        code: "0",
         data: data ?? null,
         msg: "一切ok",
       };
@@ -96,7 +96,7 @@ export default defineMock([
         ...body,
       });
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "新增成功",
       };
@@ -113,7 +113,7 @@ export default defineMock([
         appList[index] = { ...appList[index], ...body };
       }
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "修改成功",
       };
@@ -132,7 +132,7 @@ export default defineMock([
         }
       }
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "删除成功",
       };
@@ -149,7 +149,7 @@ export default defineMock([
         item.status = body.status;
       }
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "状态更新成功",
       };

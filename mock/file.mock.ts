@@ -8,7 +8,7 @@ export default defineMock([
     body() {
       const name = `mock-upload-${Date.now()}.png`;
       return {
-        code: "00000",
+        code: "0",
         data: {
           name,
           url: "https://foruda.gitee.com/images/1723603502796844527/03cdca2a_716974.gif",
@@ -24,7 +24,7 @@ export default defineMock([
     method: ["DELETE"],
     body({ query }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: query.filePath ? `删除文件 ${query.filePath} 成功` : "删除成功",
       };

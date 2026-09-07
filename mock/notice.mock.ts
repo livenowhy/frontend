@@ -5,7 +5,7 @@ export default defineMock([
     url: "notices",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: {
         list: [
           {
@@ -151,7 +151,7 @@ export default defineMock([
     method: ["POST"],
     body() {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "新增成功",
       };
@@ -164,7 +164,7 @@ export default defineMock([
     method: ["GET"],
     body: ({ params }) => {
       return {
-        code: "00000",
+        code: "0",
         data: noticeMap[params.id],
         msg: "一切ok",
       };
@@ -181,7 +181,7 @@ export default defineMock([
       if (noticeMap[params.id]) noticeMap[params.id].isRead = 1;
 
       return {
-        code: "00000",
+        code: "0",
         data: noticeMap[params.id],
         msg: "一切ok",
       };
@@ -197,7 +197,7 @@ export default defineMock([
       });
 
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "全部已读成功",
       };
@@ -209,7 +209,7 @@ export default defineMock([
     method: ["PUT"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "修改通知" + body.title + "成功",
       };
@@ -222,7 +222,7 @@ export default defineMock([
     method: ["DELETE"],
     body({ params }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "删除通知" + params.id + "成功",
       };
@@ -243,7 +243,7 @@ export default defineMock([
       const start = (page_num - 1) * page_size;
 
       return {
-        code: "00000",
+        code: "0",
         data: {
           list: filtered.slice(start, start + page_size),
           total: filtered.length,

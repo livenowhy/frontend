@@ -5,7 +5,7 @@ export default defineMock([
     url: "menus/routes",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: [
         {
           path: "/system",
@@ -543,7 +543,7 @@ export default defineMock([
     url: "menus",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: [
         {
           id: "1",
@@ -1631,7 +1631,7 @@ export default defineMock([
     url: "menus/options",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: [
         {
           value: "1",
@@ -1981,7 +1981,7 @@ export default defineMock([
     method: ["POST"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "新增菜单" + body.name + "成功",
       };
@@ -1995,7 +1995,7 @@ export default defineMock([
     body: ({ params }) => {
       const menu = menuMap[params.id];
       return {
-        code: "00000",
+        code: "0",
         data:
           menu ??
           ({
@@ -2027,7 +2027,7 @@ export default defineMock([
     method: ["PUT"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "修改菜单" + body.name + "成功",
       };
@@ -2040,7 +2040,7 @@ export default defineMock([
     method: ["DELETE"],
     body({ params }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "删除菜单" + params.id + "成功",
       };

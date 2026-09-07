@@ -5,7 +5,7 @@ export default defineMock([
     url: "roles/options",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: [
         { value: "2", label: "系统管理员" },
         { value: "4", label: "部门主管" },
@@ -22,7 +22,7 @@ export default defineMock([
     url: "roles",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: {
         list: [
           {
@@ -98,7 +98,7 @@ export default defineMock([
     method: ["POST"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "新增角色" + body.name + "成功",
       };
@@ -111,7 +111,7 @@ export default defineMock([
     method: ["GET"],
     body: ({ params }) => {
       return {
-        code: "00000",
+        code: "0",
         data: roleMap[params.id],
         msg: "一切ok",
       };
@@ -123,7 +123,7 @@ export default defineMock([
     method: ["PUT"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "修改角色" + body.name + "成功",
       };
@@ -136,7 +136,7 @@ export default defineMock([
     method: ["DELETE"],
     body({ params }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "删除角色" + params.id + "成功",
       };
@@ -148,7 +148,7 @@ export default defineMock([
     method: ["GET"],
     body: () => {
       return {
-        code: "00000",
+        code: "0",
         data: [
           1, 2, 31, 32, 33, 88, 3, 70, 71, 72, 4, 73, 75, 74, 5, 76, 77, 78, 6, 79, 81, 84, 85, 86,
           87, 40, 41, 26, 30, 20, 21, 22, 23, 24, 89, 90, 91, 36, 37, 38, 39, 93, 94, 95, 97, 102,
@@ -163,7 +163,7 @@ export default defineMock([
     url: "roles/:id/menus",
     method: ["PUT"],
     body: {
-      code: "00000",
+      code: "0",
       data: null,
       msg: "一切ok",
     },
@@ -176,7 +176,7 @@ export default defineMock([
     body: ({ params }) => {
       const role = roleMap[params.id];
       return {
-        code: "00000",
+        code: "0",
         data: role?.dataScope === 5 ? role.deptIds || [1, 2] : [],
         msg: "一切ok",
       };

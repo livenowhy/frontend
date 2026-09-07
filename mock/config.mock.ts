@@ -42,7 +42,7 @@ export default defineMock([
       const size = Number(page_size);
       const start = (page - 1) * size;
       return {
-        code: "00000",
+        code: "0",
         data: {
           list: filtered.slice(start, start + size),
           total: filtered.length,
@@ -59,7 +59,7 @@ export default defineMock([
     body({ params }) {
       const data = configList.find((item) => item.id === params.id);
       return {
-        code: "00000",
+        code: "0",
         data: data ?? null,
         msg: "一切ok",
       };
@@ -73,7 +73,7 @@ export default defineMock([
     body({ body }) {
       configList.unshift({ id: String(configList.length + 1), ...body });
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "新增成功",
       };
@@ -90,7 +90,7 @@ export default defineMock([
         configList[index] = { ...configList[index], ...body };
       }
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "修改成功",
       };
@@ -107,7 +107,7 @@ export default defineMock([
         configList.splice(index, 1);
       }
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "删除成功",
       };
@@ -119,7 +119,7 @@ export default defineMock([
     url: "configs/refresh",
     method: ["PUT"],
     body: {
-      code: "00000",
+      code: "0",
       data: null,
       msg: "刷新成功",
     },

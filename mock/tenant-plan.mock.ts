@@ -5,7 +5,7 @@ export default defineMock([
     url: "tenant-plans",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: {
         list: [
           {
@@ -38,7 +38,7 @@ export default defineMock([
     url: "tenant-plans/options",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: [
         { value: "1", label: "基础版" },
         { value: "2", label: "专业版" },
@@ -71,7 +71,7 @@ export default defineMock([
             };
 
       return {
-        code: "00000",
+        code: "0",
         data: form,
         msg: "一切ok",
       };
@@ -81,7 +81,7 @@ export default defineMock([
     url: "tenant-plans",
     method: ["POST"],
     body: {
-      code: "00000",
+      code: "0",
       data: null,
       msg: "一切ok",
     },
@@ -90,7 +90,7 @@ export default defineMock([
     url: "tenant-plans/:planId",
     method: ["PUT"],
     body: {
-      code: "00000",
+      code: "0",
       data: null,
       msg: "一切ok",
     },
@@ -99,7 +99,7 @@ export default defineMock([
     url: "tenant-plans/:ids",
     method: ["DELETE"],
     body: {
-      code: "00000",
+      code: "0",
       data: null,
       msg: "一切ok",
     },
@@ -108,7 +108,7 @@ export default defineMock([
     url: "tenant-plans/:planId/menuIds",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: [1, 2, 3, 4, 5, 6],
       msg: "一切ok",
     },
@@ -117,7 +117,7 @@ export default defineMock([
     url: "tenant-plans/:planId/menus",
     method: ["PUT"],
     body: {
-      code: "00000",
+      code: "0",
       data: null,
       msg: "一切ok",
     },

@@ -5,7 +5,7 @@ export default defineMock([
     url: "dicts",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: {
         list: [
           {
@@ -28,7 +28,7 @@ export default defineMock([
     url: "dicts/options",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: [
         {
           value: "gender",
@@ -45,7 +45,7 @@ export default defineMock([
     method: ["POST"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "新增字典" + body.name + "成功",
       };
@@ -58,7 +58,7 @@ export default defineMock([
     method: ["GET"],
     body: ({ params }) => {
       return {
-        code: "00000",
+        code: "0",
         data: dictMap[params.id],
         msg: "一切ok",
       };
@@ -71,7 +71,7 @@ export default defineMock([
     method: ["PUT"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "修改字典" + body.name + "成功",
       };
@@ -84,7 +84,7 @@ export default defineMock([
     method: ["DELETE"],
     body({ params }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "删除字典" + params.ids + "成功",
       };
@@ -100,7 +100,7 @@ export default defineMock([
     url: "dicts/:dictCode/items",
     method: ["GET"],
     body: {
-      code: "00000",
+      code: "0",
       data: {
         list: [
           {
@@ -214,7 +214,7 @@ export default defineMock([
       }
 
       return {
-        code: "00000",
+        code: "0",
         data: list,
         msg: "一切ok",
       };
@@ -226,7 +226,7 @@ export default defineMock([
     method: ["POST"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "新增字典项" + body.label + "成功",
       };
@@ -239,7 +239,7 @@ export default defineMock([
     method: ["GET"],
     body: ({ params }) => {
       return {
-        code: "00000",
+        code: "0",
         data: dictItemMap[params.itemId],
         msg: "一切ok",
       };
@@ -252,7 +252,7 @@ export default defineMock([
     method: ["PUT"],
     body({ body }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "修改字典项" + body.label + "成功",
       };
@@ -265,7 +265,7 @@ export default defineMock([
     method: ["DELETE"],
     body({ params }) {
       return {
-        code: "00000",
+        code: "0",
         data: null,
         msg: "删除字典" + params.itemId + "成功",
       };

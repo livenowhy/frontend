@@ -14,7 +14,7 @@ export default defineMock([
             code: "BASIC",
             status: 1,
             sort: 1,
-            remark: "",
+            description: "",
             createTime: "2026-03-01 10:00:00",
             updateTime: "2026-03-01 10:00:00",
           },
@@ -24,7 +24,7 @@ export default defineMock([
             code: "PRO",
             status: 1,
             sort: 2,
-            remark: "",
+            description: "",
             createTime: "2026-03-02 10:00:00",
             updateTime: "2026-03-02 10:00:00",
           },
@@ -59,7 +59,7 @@ export default defineMock([
               code: "PRO",
               status: 1,
               sort: 2,
-              remark: "",
+              description: "",
             }
           : {
               id: "1",
@@ -67,7 +67,7 @@ export default defineMock([
               code: "BASIC",
               status: 1,
               sort: 1,
-              remark: "",
+              description: "",
             };
 
       return {

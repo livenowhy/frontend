@@ -238,8 +238,8 @@
           </el-radio-group>
         </el-form-item>
 
-        <el-form-item label="备注" prop="remark">
-          <el-input v-model="formData.remark" type="textarea" :rows="3" placeholder="可选" />
+        <el-form-item label="备注" prop="description">
+          <el-input v-model="formData.description" type="textarea" :rows="3" placeholder="可选" />
         </el-form-item>
       </el-form>
 
@@ -434,7 +434,7 @@ const initialFormData: TenantForm & TenantCreateForm = {
   contactPhone: "",
   contactEmail: "",
   planId: undefined,
-  remark: "",
+  description: "",
   expireTime: undefined,
   status: CommonStatus.ENABLED,
   adminUsername: "",
@@ -907,7 +907,7 @@ const handleSubmit = useDebounceFn(async (): Promise<void> => {
         contactPhone: formData.contactPhone,
         contactEmail: formData.contactEmail,
         planId: formData.planId,
-        remark: formData.remark,
+        description: formData.description,
         expireTime: formData.expireTime,
         status: formData.status,
       };
@@ -922,7 +922,7 @@ const handleSubmit = useDebounceFn(async (): Promise<void> => {
         contactPhone: formData.contactPhone,
         contactEmail: formData.contactEmail,
         planId: formData.planId,
-        remark: formData.remark,
+        description: formData.description,
         expireTime: formData.expireTime,
         adminUsername: formData.adminUsername,
       };

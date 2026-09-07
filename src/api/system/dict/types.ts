@@ -36,7 +36,7 @@ export interface DictTypeForm {
   /** 状态(1:启用;0:禁用) */
   status?: number;
   /** 备注 */
-  remark?: string;
+  description?: string;
 }
 
 /** 字典项分页查询参数 */

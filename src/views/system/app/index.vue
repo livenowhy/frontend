@@ -98,9 +98,9 @@
             </template>
           </el-table-column>
           <el-table-column
-            key="remark"
+            key="description"
             label="备注"
-            prop="remark"
+            prop="description"
             min-width="160"
             show-overflow-tooltip
           />
@@ -198,9 +198,9 @@
           </el-radio-group>
         </el-form-item>
 
-        <el-form-item label="备注" prop="remark">
+        <el-form-item label="备注" prop="description">
           <el-input
-            v-model="formData.remark"
+            v-model="formData.description"
             :rows="3"
             :maxlength="255"
             show-word-limit
@@ -261,7 +261,7 @@ const initialFormData: AppForm = {
   merchantId: "",
   merchantKey: "",
   status: CommonStatus.ENABLED,
-  remark: "",
+  description: "",
 };
 
 /** 应用表格数据 */

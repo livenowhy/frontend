@@ -21,7 +21,7 @@ export interface ConfigForm {
   /** 配置值 */
   configValue?: string;
   /** 备注 */
-  remark?: string;
+  description?: string;
 }
 
 /** 配置分页对象 */

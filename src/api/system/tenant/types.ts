@@ -34,7 +34,7 @@ export interface TenantItem {
   logo?: string;
   planId?: number;
   status?: number;
-  remark?: string;
+  description?: string;
   expireTime?: string;
   createTime?: string;
   updateTime?: string;
@@ -52,7 +52,7 @@ export interface TenantForm {
   logo?: string;
   planId?: number;
   status?: number;
-  remark?: string;
+  description?: string;
   expireTime?: string;
 }
 
@@ -66,7 +66,7 @@ export interface TenantCreateForm {
   domain?: string;
   logo?: string;
   planId?: number;
-  remark?: string;
+  description?: string;
   expireTime?: string;
   adminUsername?: string;
 }

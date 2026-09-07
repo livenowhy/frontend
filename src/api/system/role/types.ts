@@ -47,5 +47,5 @@ export interface RoleForm {
   /** 角色状态 */
   status?: number;
   /** 备注 */
-  remark?: string;
+  description?: string;
 }

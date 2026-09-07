@@ -19,7 +19,7 @@ export interface TenantPlanItem {
   code?: string;
   status?: number;
   sort?: number;
-  remark?: string;
+  description?: string;
   createTime?: string;
   updateTime?: string;
 }
@@ -31,5 +31,5 @@ export interface TenantPlanForm {
   code?: string;
   status?: number;
   sort?: number;
-  remark?: string;
+  description?: string;
 }

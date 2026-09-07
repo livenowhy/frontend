@@ -69,7 +69,7 @@
             </template>
           </el-table-column>
           <el-table-column label="排序" prop="sort" width="80" align="center" />
-          <el-table-column label="备注" prop="remark" min-width="140" />
+          <el-table-column label="备注" prop="description" min-width="140" />
           <el-table-column label="创建时间" prop="createTime" width="180" />
           <el-table-column fixed="right" label="操作" width="240">
             <template #default="scope">
@@ -142,8 +142,8 @@
             style="width: 120px"
           />
         </el-form-item>
-        <el-form-item label="备注" prop="remark">
-          <el-input v-model="formData.remark" type="textarea" :rows="3" placeholder="可选" />
+        <el-form-item label="备注" prop="description">
+          <el-input v-model="formData.description" type="textarea" :rows="3" placeholder="可选" />
         </el-form-item>
       </el-form>
       <template #footer>
@@ -279,7 +279,7 @@ const initialFormData: TenantPlanForm = {
   code: "",
   status: CommonStatus.ENABLED,
   sort: 1,
-  remark: "",
+  description: "",
 };
 
 const formData = reactive<TenantPlanForm>({ ...initialFormData });

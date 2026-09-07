@@ -12,7 +12,7 @@ const appList: Array<Record<string, any>> = [
     merchantId: "1900000001",
     merchantKey: "MCH_KEY_123456",
     status: 1,
-    remark: "有来商城公众号应用",
+    description: "有来商城公众号应用",
     createTime: "2024-01-15 10:00:00",
   },
   {
@@ -25,7 +25,7 @@ const appList: Array<Record<string, any>> = [
     merchantId: "1900000002",
     merchantKey: "MCH_KEY_654321",
     status: 1,
-    remark: "有来商城微信小程序应用",
+    description: "有来商城微信小程序应用",
     createTime: "2024-02-20 14:30:00",
   },
   {
@@ -36,7 +36,7 @@ const appList: Array<Record<string, any>> = [
     appId: "com.youlai.mall.app",
     appSecret: "",
     status: 0,
-    remark: "iOS 端应用（已停用）",
+    description: "iOS 端应用（已停用）",
     createTime: "2023-11-08 09:12:00",
   },
 ];

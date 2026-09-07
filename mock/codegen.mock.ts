@@ -145,7 +145,7 @@ const defaultFieldConfigs = [
     dictType: "",
   },
   {
-    columnName: "create_time",
+    columnName: "created_at",
     columnType: "datetime",
     fieldName: "createTime",
     fieldType: "LocalDateTime",

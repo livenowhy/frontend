@@ -55,7 +55,7 @@ export const useTenantStore = defineStore("tenant", () => {
    * 3. 如果只有一个租户，自动选中
    * 4. 否则等待用户手动选择
    *
-   * @remarks
+   * @descriptions
    * 此方法由路由守卫调用，仅在启用多租户时执行
    */
   async function loadTenant() {

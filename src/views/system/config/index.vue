@@ -57,7 +57,7 @@
           <el-table-column key="configName" label="配置名称" prop="configName" min-width="100" />
           <el-table-column key="configKey" label="配置键" prop="configKey" min-width="100" />
           <el-table-column key="configValue" label="配置值" prop="configValue" min-width="100" />
-          <el-table-column key="remark" label="描述" prop="remark" min-width="100" />
+          <el-table-column key="description" label="描述" prop="description" min-width="100" />
           <el-table-column fixed="right" label="操作" width="220">
             <template #default="scope">
               <el-button
@@ -114,9 +114,9 @@
         <el-form-item label="配置值" prop="configValue">
           <el-input v-model="formData.configValue" placeholder="请输入配置值" :maxlength="100" />
         </el-form-item>
-        <el-form-item label="描述" prop="remark">
+        <el-form-item label="描述" prop="description">
           <el-input
-            v-model="formData.remark"
+            v-model="formData.description"
             :rows="4"
             :maxlength="100"
             show-word-limit
@@ -171,7 +171,7 @@ const formData = reactive<ConfigForm>({
   configName: "",
   configKey: "",
   configValue: "",
-  remark: "",
+  description: "",
 });
 
 const rules: FormRules = {
